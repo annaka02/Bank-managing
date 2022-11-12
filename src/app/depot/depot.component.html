@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://thumbs.dreamstime.com/b/bank-icon-vector-sign-symbol-isolated-white-background-bank-logo-concept-bank-icon-vector-isolated-white-background-134167171.jpg" alt="" style="width: 6%;">
+            World Bank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/accueil"><i class="bi bi-house"></i>Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/depot"><i class="bi bi-wallet"></i>Depot</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/retrait"><i class="bi bi-cash-stack"></i>Retrait</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/virement"><i class="bi bi-currency-exchange"></i>Virement</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<div class="formulaire" style="margin: 30px; padding: 30px">
+    <h5>Deposit via World Bank</h5>
+    <form action="post">
+        <label for="amount">Amount</label> <br>
+    <input type="text" class="form-control" [(ngModel)]="request.amount" required>
+    <label for="currency">Currency</label>
+    <input type="text" class="form-control" name="currency"  [(ngModel)]="request.currency" required>
+    <label for="sender">Sender</label>
+    <input type="text" class="form-control"  [(ngModel)]="request.sender" required>
+    <label for="sender">Receiver</label>
+    <input type="text" class="form-control"  [(ngModel)]="request.receiver" required>
+       <label for="status">Status</label>   
+       <input type="text" name="status" class="form-control" [(ngModel)]="request.status" required> 
+       <label for="date">Date</label>
+    <input type="datetime" name="date" class="form-control"  [(ngModel)]="request.created" required>
+    <button class="btn btn-success"  (click)="saveDeposit()" style="margin: 15px;">Process</button>
+        </form>
+</div>
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer>
+        <div class="footer-content">
+            <h3>World Bank</h3>
+            <h5>Emplacements | Nous contacter | Aider | Services Bancaires | Securite | Pratiques Publicitaires</h5>
+            <p>Connecte toi avec nous.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                <li><a href="#"><i class="bi bi-google"></i></a></li>
+                <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2022, Word Bank. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+      </body>
+      </html>
+      
